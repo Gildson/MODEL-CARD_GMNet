@@ -5,7 +5,7 @@ Model card é uma explicação sucinta sobre o modelo na forma de um documento, 
 ## Model Details
 O modelo foi criado por Gildson Bezerra e Micael Balza durante a disciplina de Inteligência Artificial Embarcada ministrada na UFRN em 2022.2 pelo professor Dr. Ivanovitch Medeiros Dantas da Silva. O pipeline dos dados foi feito ultilizando ferramentas como Google colab, Scikit-Learn e Weights & Bias e Python como linguagem de programação para reproduzir e melhorar a estrutura de rede neural convolucional proposta em 1998 por LeCun chamada de LeNet-5. A ideia é reproduzir a sua versão original, uma modificada pelo professor chamada de IvanNet e implementar esta versão modificada chamada GMNet com o intuito de melhorar a acuracia comparado aos outros modelos. A big-picture do fluxo de dados e etapas é descrita na imagem a seguir:
  
-<img width="800" src="1.png">
+<img width="800" src="Pictures/1.png">
  
 ## Intended Use
 Este GitHub é composto pelas arquivos:  a) ``LeNet.ipynb``, b) ``GMnet.ipynb``, que são os nomes dos arquivos que contem os modelos para o LeNet e ivanNet em (a) e o GMNet em (b). Cada arquivo já contem as etapas de coleta do dataset; pré-processamento; separação dos dados; treinamento; validação e teste; como tambem outras etapas referentes a Weights & Bias e a importação de bibliotecas.
@@ -14,11 +14,11 @@ Este GitHub é composto pelas arquivos:  a) ``LeNet.ipynb``, b) ``GMnet.ipynb``,
  
 O objetivo é reproduzir a rede LeNet-5 e sua variação IvanNet e compara-las em termos de acurracia com uma nova implementação GMNet. De modo que o dataset é o mesmo para todas as implementações, foi realizado a etapa de Data Augmentation em alguns treinamentos conforme figura abaixo, para comparar os efeitos que se tem na generalização e acuracia.
 
- <img width="600" src="2.png">
+ <img width="600" src="Pictures/2.png">
 
 O dataset deste problema é conhecido por MNIST standard dataset, composto por 70.000 imagens de algarismos de 0 a 9 com uma resolução de 28 x 28 pixels em tons de cinza(1 canal). A etapa de Data Augmentation modifica levemente algumas imagens do dataset original com relação a rotação, zoon e localização dentro de uma faixa de valores definido, aumentando assim a generalização dos dados e consequentemente a do modelo.
 
-<img width="600" src="3.png">
+<img width="600" src="Pictures/3.png">
  (Imagem retirada e modificada de <https://raw.githubusercontent.com/ivanovitchm/embedded.ai/main/lessons/week_08/Week%2008%20-%20Part%20I.pdf>. Acesso em 06/11/2022 as 18:00)
  
  
@@ -56,7 +56,7 @@ GMNet-sweep-1 [cerulean-sweep-6](https://wandb.ai/gildson/GMNet-sweep/sweeps/uc4
  
 A plataforma do Wandb gerou as seguintes configurações no sweep:
 
-<img width="600" src="5.png">
+<img width="600" src="Pictures/5.png">
  
  
  
@@ -70,5 +70,5 @@ falar do D_A
 FALAR DA DIFERENÇA -- se um foi melhor que o outro -- pq foi assim -- e mostrar a  imagem legal lá e a acurácia
 Mostrar o a melhor conf.
 
-<img width="600" src="6.jpeg">
-<img width="600" src="7.jpeg">
+<img width="600" src="Pictures/6.jpeg">
+<img width="600" src="Pictures/7.jpeg">
