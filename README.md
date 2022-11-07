@@ -46,7 +46,7 @@ IvanNet [electric-glitter-1](https://wandb.ai/micaelbalza/IvaNet-5?workspace=use
 GMNet
  
 **Stage [Run]**                        | **Accuracy** | **Layers** | **Activation** |
----------------------------------|--------------|--------|---------------|------------|
+---------------------------------|--------------|--------|---------------|
 GMNet-sweep-1 [dulcet-sweep-1](https://wandb.ai/gildson/GMNet-sweep/sweeps/uc4n5obh?workspace=user-micaelbalza) | 0.7637      | 120 | tanh        |
 GMNet-sweep-2 [fast-sweep-2](https://wandb.ai/gildson/GMNet-sweep/sweeps/uc4n5obh?workspace=user-micaelbalza)  | 0.1011      | 300 | tanh        |
 GMNet-sweep-1 [swift-sweep-3](https://wandb.ai/gildson/GMNet-sweep/sweeps/uc4n5obh?workspace=user-micaelbalza) | 0.1      | 180 | tanh       |
