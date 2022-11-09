@@ -46,7 +46,7 @@ IvanNet [electric-glitter-1](https://wandb.ai/micaelbalza/IvaNet-5?workspace=use
 GMNet
  
 **Stage [Run]**                        | **Accuracy** | **Layers** | **Activation** |
----------------------------------|--------------|--------|---------------|
+---------------------------------|--------------|--------|---------------|------------|
 GMNet-sweep-1 [dulcet-sweep-1](https://wandb.ai/gildson/GMNet-sweep/sweeps/uc4n5obh?workspace=user-micaelbalza) | 0.7637      | 120 | tanh        |
 GMNet-sweep-2 [fast-sweep-2](https://wandb.ai/gildson/GMNet-sweep/sweeps/uc4n5obh?workspace=user-micaelbalza)  | 0.1011      | 300 | tanh        |
 GMNet-sweep-1 [swift-sweep-3](https://wandb.ai/gildson/GMNet-sweep/sweeps/uc4n5obh?workspace=user-micaelbalza) | 0.1      | 180 | tanh       |
@@ -68,7 +68,7 @@ O dataset é composto por 7000 imagens de algarismos variando de 0 a 9. Desta fo
 
 Comparando as implementações com e sem o processo de Data Augmentation foi percebido uma diminuição no valor da acuracia, aumento do tempo gasto em todo o processo com o objetivo de buscar uma maior generalização do modelo, como mostrado nas métricas geradas no LeNet-5 e LeNet-5_D_A.
 
-Conseguimos criar um modelo que superou as implementações propostas no arquivo (B) ultilizando o sweeps onde a GMNet-sweep-2 [vivid-sweep-4](https://wandb.ai/gildson/GMNet-sweep/sweeps/uc4n5obh?workspace=user-micaelbalza) atingiu uma acuracia de 0.9912222027778624 durante a época 15 e uma acuracia de 0.991333305835724 no dataset de validação.
+Conseguimos criar um modelo que superou as implementações propostas no arquivo (B) ultilizando o sweeps onde a GMNet-sweep-2 [vivid-sweep-4](https://wandb.ai/gildson/GMNet-sweep/sweeps/uc4n5obh?workspace=user-micaelbalza) atingiu uma acurácia de 0.9912222027778624 durante a época 15 e uma acurácia de 0.991333305835724 no dataset de validação.
 As configurações utilizadas são mostradas na imagem a seguir:
 <img width="600" src="Pictures/8.png">
 
@@ -77,7 +77,19 @@ Gerando a seguinte matriz de confusão:
 <img width="600" src="Pictures/6.jpeg">
 
 Comparando os dataset de treinamento e validação temos:
-<img width="600" src="Pictures/7.jpeg">
+<img width="600" src="Pictures/9.png">
 
-Nota-se que como a acurácia do dataset de treinamento e de validação estão proximas no grafico demostrando assim baixo overfit.
+Nota-se que como a acurácia do dataset de treinamento e de validação estão próximas no gráfico demonstrando assim baixo overfit.
 
+
+Nota-se que como a acurácia do dataset de treinamento e de validação estão próximas no gráfico demonstrando assim baixo overfit. Foi testado por fim a melhor configuração([vivid-sweep-4](https://wandb.ai/gildson/GMNet-sweep/sweeps/uc4n5obh?workspace=user-micaelbalza)) com data augmentation gerando a matriz de confusão a seguir:
+
+<img width="600" src="Pictures/10.png">
+
+Comparando a acurácia do dataset de treinamento e validação antes e depois da etapa de data augmentation, nota-se o efeito da generalização dos dados de treinamento na diminuição do overfit, de modo que ambas as linhas de acurácia estão coincidentes a partir da época numero 10.
+
+GMNet_D_A
+ 
+**Stage [Run]**                        | **Accuracy** | **F1** | **Precision** | **Recall** |
+---------------------------------|--------------|--------|---------------|------------|
+GMNet_D_A [decent-surf-1](https://wandb.ai/micaelbalza/GMNet_D_A?workspace=user-micaelbalza) | 0.9937    | 0.9937 | 0.9937        | 0.9937     |
